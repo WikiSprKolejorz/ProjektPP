@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Historia Lecha Poznań</title>
+    <style>
+        h1,h2{text-align: center;}
+    </style>
+    <link rel="stylesheet" href="stylecss/layout.css">
+</head>
+<body>
+    
+    <header style="background-color: aqua; color: black;">    
+        <h1>
+Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
+        </h1>
+
+    </header>
+    
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <l1><a href="index.html">Strona główna</a></l1>
+            <l1><a href="artykul.html">Artykuł</a></l1>
+            <l1><a href="tabela.html">Tabela godzin pracy</a></l1>
+            <l1><a href="formularz.html">formularz</a></l1>
+            <l1><a href="tablicaJS.html">Tabela dynamiczna w JS</a></l1>
+        </ul>   
+
+        </ul>
+    </nav>
+    <article>
+        <script>
+            //alert("Komunikat - alert!");
+            var zmienna=10;
+            zmiennaC=100;
+
+     let a=5;
+     const stala=34;
+     //stala=99; BŁĄD!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            
+            {
+                let a=10;
+            }
+            
+           // alert("zm a:"+a) 
+           // alert("stala:"+stala)
+        
+            document.write("<h2> Pętla for </h2>")
+            
+            for (let index = 0; index < 10; index++) {
+               document.write("Linia nr: " +index + "<br>");
+               console.log(index);
+                
+            }
+           
+            a=0;
+            while (a>10) {
+                document.write ('Linia nr: {a} <br>');
+                a++;
+            }
+           
+            //-----zmienne
+            let zmienna_txt = "Ala ma kota";
+            document.write("liczba znaków: " +zmienna_txt.length+ "<br>");
+            document.write(zmienna_txt.charAt(10)+"<br>");
+            document.write(`Ostania litera to:)
+            ${zmienna_txt.charAt(zmienna_txt.length-1)}`);
+
+            document.write("<br><br>");
+            for(let i=0; i<zmienna_txt.length; i++){
+                for(let j=0; j<i; j++) document.write("&nbsp;&nbsp;");
+                document.write(zmienna_txt.charAt(i)+"<br>")
+
+            }
+            const tabZ= [...zmienna_txt];
+            console.table(tabZ)
+
+            document.write("<br>");
+            document.write(zmienna_txt.substring(0,3)+"<br>");
+            document.write(zmienna_txt.substring(3)+"<br>");
+
+            document.write(zmienna_txt.toUpperCase()+"<br>");
+
+
+
+            
+        </script>
+    </article>
+
+    <aside>
+        <iframe src="aside.html"></iframe>
+    </aside>
+
+    <footer>
+<p>To jest sropka</p>
+<address>
+    <a href="">O nas</a>
+    <br>
+    <a href="">Kontakt</a>
+</address>
+    </footer>
+</body>
+</html>

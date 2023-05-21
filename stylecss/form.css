@@ -1,0 +1,50 @@
+em{
+    color: red;
+    font-weight: bold;
+}
+fieldset{
+    width: 400px;
+    margin: 15px auto;
+    border: 3px double black;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+legend{
+    font-size: 22px;
+    color: darkmagenta;
+    text-shadow: 2px 3px 1px blue;
+    text-decoration: underline;
+}
+label{
+    width: 150px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px;
+    background-color: orangered;
+    border-bottom: 1px solid blueviolet;
+}
+input[type] :focus {
+    background-color: coral;
+    font-size: 18px;
+}
+input[type="reset"], input[type="submit"]{
+    font-size: 18px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: bisque;
+    border: 5px dotted violet;
+    border-radius: 20px;
+}
+input[type="reset"]:hover{
+    background-color: red
+}
+input[type="submit"]:hover{
+    background-color: lime;
+}
+
+.przyciski{
+    width: 300px;
+    margin:auto;
+}

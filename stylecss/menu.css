@@ -1,0 +1,40 @@
+nav ul li, nav ul{
+display: block;
+list-style: none;
+margin: 0px;
+padding: 0px;
+}
+
+nav ul{
+    border: 3px double hotpink;
+    width: 180px;
+    background-color: aquamarine;
+    padding: 2px 2px 2px 1px;
+}
+nav ul li{
+    border-bottom: 1px solid green;
+}
+nav ul li a:link, nav ul li a:visited {
+    text-decoration: none;
+    width: 170px;
+    background-color: bisque;
+    display: block;
+    padding: 7px;
+    font-weight: bold;
+    border-left: 10px solid red;
+}
+nav ul li a:hover{
+    background-color: black;
+   /* width: 160px; */
+    border-left: 20px solid whitesmoke;
+    color: gold;
+}
+nav ul li a:visited {
+    text-decoration: none;
+    width: 170px;
+    background-color: bisque;
+    display: block;
+    padding: 7px;
+    font-weight: bold;
+    border-left: 10px solid greenyellow;
+}

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>formularz</title>
+    <style>
+        h1,h2{text-align: center;}
+    </style>
+    <link rel="stylesheet" href="stylecss/layout.css">
+    <link rel="stylesheet" href="stylecss/form.css">
+</head>
+<body>
+    
+    <header style="background-color: aqua; color: black;">    
+        <h1>
+Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
+        </h1>
+
+    </header>
+    
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <l1><a href="index.html">Strona główna</a></l1>
+            <l1><a href="artykul.html">Artykuł</a></l1>
+            <l1><a href="tabela.html">Tabela godzin pracy</a></l1>
+            <l1><a href="formularz.html">formularz</a></l1>
+            <l1><a href="tablicaJS.html">Tabela dynamiczna w JS</a></l1>
+        </ul>   
+
+        </ul>
+    </nav>
+    <article>
+        <h2>Formularz danych osobowych</h2>
+        <form action="#" method="post">
+            <p>Pola tekstowe z <em>*</em> są wymagane</p>
+            <fieldset>
+                <legend>Dane osobowe</legend>
+                <label for="imie">imie <em>*</em></label>
+                <input type="text" name="imie" id="imie">
+<br>
+                <label for="Nazwisko">nazwisko <em>*</em></label>
+                <input type="text" name="nazwisko" id="nazwisko">
+                <br>
+                <label for="telefon">nr telefonu <em>*</em></label>
+                <input type="telefon" name="telefon" id="telefon" required placeholder="(+48 xxx-xxx-xxx)">
+
+                <br>
+                <label for="mail">mail <em>*</em></label>
+                <input type="email" name="email" id="email" required placeholder="np. example@example.com">
+                
+            </fieldset>
+
+            <fieldset>
+                <legend> Szczegółowe dane osobowe </legend>
+                <label for="data Urodzenia">Data urodzenia</label>
+                <input type="date" name="data Urodzenia" id="">
+<br>
+                <label for="kod">Kod pocztowy</label>
+                <input type="text" name="kod" id="" placeholder="xx-xxx">
+                <label for="miasto">Miasto</label>
+                <input type="text" name="miasto" id="" placeholder="Poznań"><br>
+                <label for="ulica">Ulica</label>
+                <input type="text" name="ulica" id="" placeholder="Romera"><br>
+                <label for="numDom">Numer domu/mieszkania</label>
+                <input type="text" name="numDom" id="" placeholder="1,2,3,4,"><br>
+
+                <label for="wzrost">Wzrost</label>
+                <input type="number" name="wzrost" id="" step="0.1" min="120" max="270">
+<br>
+<label for="płeć">Płeć</label>
+<select name="płeć" id="">
+    <option value="Kobieta">Kobieta</option>
+    <option value="Mężczyzna">Mężczyzna</option>
+    <option value="Helikopter">Helikopter</option>
+    <option value="Delfin">Delfin</option>
+</select>
+<br>
+             <label for="siła">Siła</label>
+             <input type="range" name="siła" id="" min="10" max="100" value="80">   
+
+            </fieldset>
+            <fieldset>
+                <legend>Zainteresowania</legend>
+                <input type="checkbox" name="en" id="en">
+                <label for="en">Energetyka </label> <br>
+                <input type="checkbox" name="noga" id="noga">
+                <label for="noga">Piłka nożna</label> <br>
+                <input type="checkbox" name="hista" id="hista">
+                <label for="hista">Historia II wojny światowej</label> <br>
+                <input type="checkbox" name="zyd" id="zyd">
+                <label for="zyd">Słynni Żydzi</label> <br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Wykształcenie</legend>
+                <input type="radio" name="w" id=""> 
+                <label for="w">inż.</label> 
+                <input type="radio" name="w" id="">
+                <label for="w">mgr</label> 
+                <input type="radio" name="w" id=""> 
+                <label for="w">dr</label> 
+                <input type="radio" name="w" id="">
+                <label for="w">prof.</label> 
+
+            </fieldset>
+            <div class="przyciski">
+                 <input type="reset" value="kasuj formularz">
+            <input type="submit" value="wyślij">
+            </div>
+           
+        </form>
+    </article>
+
+    <aside>
+        <iframe src="aside.html"></iframe>
+    </aside>
+
+    <footer>
+<p>To jest sropka</p>
+<address>
+    <a href="">O nas</a>
+    <br>
+    <a href="">Kontakt</a>
+</address>
+    </footer>
+</body>
+</html>

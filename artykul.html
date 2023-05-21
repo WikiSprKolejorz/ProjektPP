@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Artykuł o historii Lecha Poznań</title>
+    <link rel="stylesheet" href="stylecss/layout.css">
+</head>
+<body>
+    
+    <header>    
+        <h1>
+Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
+        </h1>
+
+    </header>
+    
+    <nav>
+        <h2>Menu</h2>
+        <ul>
+            <l1><a href="index.html">Strona główna</a></l1>
+            <l1><a href="artykul.html">Artykuł</a></l1>
+            <l1><a href="tabela.html">Tabela godzin pracy</a></l1>
+            <l1><a href="formularz.html">formularz</a></l1>
+            <l1><a href="tablicaJS.html">Tabela dynamiczna w JS</a></l1>
+        </ul>   
+
+        </ul>
+    </nav>
+    <article>
+        <header>
+            <h2>
+Marginesy w CSS
+            </h2>
+            <h3>Wprowadzenie</h3>
+        </header>
+        <p>Każdy element generuje w dokumencie prostokątny obszar zwany pudełkiem (ang. Box model). Pudełko składa się z: </p>
+        <ol type="a">
+        <li> Zawartości - "Content" (np. test, obrazek itd.)
+        <li> Otaczających marginesów wewnętrznych - "Padding"
+        <li> Obramowania - "Border"
+        <li> Marginesów - "Margin"
+
+        </ol>
+
+        <p>
+            Ostatnie trzy składniki są opcjonalne, tzn. mogą mieć wartość zero. Obwód (zewnętrzny) każdego z czterech obszarów nazywamy krawędzią ("Edge"). Według CSS rozmiary elementu (własności width oraz height) odnoszą się do samej zawartości ("Content") i nie wpływają na pozostałe obszary modelu pudełkowego ("Box model"), które są tworzone na zewnątrz zawartości, ale wewnątrz pudełka. Natomiast tło elementu jest określone dla wszystkich z podanych powyżej obszarów z wyjątkiem marginesów zewnętrznych, które zawsze są przez roczyste ("Transparent"). Zapamiętanie tych krótkich zasad pozwoli Ci uniknąć w przyszłości nieoczeki wanych problemów z wyświetlaniem elementów strony. Na rys. 1 znajdziesz graficzną interpretację pudełkowej budowy elementów w CSS. 
+        </p>
+        <figure>
+        <img src="images/image1.png" alt="marginesy w CSS">
+            <figcaption>
+                Rysunek 1. Strukutra ramek i marginesów znacznika HTML wg. CSS. 
+            </figcaption>
+        </figure>
+        
+   
+                 <h2>Przykład zastosowania wzoru w znacznku figure</h2>  
+                 <p> Postać czasowa sygnału okresowego zmiennego sinusoidalnie zgodnie z zależnością: </p>
+       <figure>
+x(t)=A<sub>m</sub><sup>1</sup>sin(2&pi;ft+&phi;<sub>0</sub>) 
+        <figcaption>
+ gdzie: 
+ <ul>
+    <li>t - czas,
+      <li>  Am1 - amplituda sygnału,
+       <li> f - częstotliwość sygnału,
+        <li>φ0 - faza początkowa.
+ </ul>
+        
+        </figcaption>
+       </figure>
+       <footer>
+        Autorzy artykułu:
+        <address>
+            Jan Kowalski <br>
+        adres email:
+        <a href="mailto:jan.kowalski@put.poznan.pl">jan.kowalski@put.poznan.pl</a><br>
+        Henryk Nowak<br>
+        adres email: 
+        <a href="mailto:henryk.nowak@put.poznan.pl">henryk.nowak@put.poznan.pl Napisz bejbe ;)</a><br>
+        Źródło strony: wikipedia.pl <br>
+        </address>
+        
+       </footer>
+        
+        </article>
+ 
+        
+
+    </article>
+
+    <aside>
+        <iframe src="aside.html"></iframe>
+    </aside>
+
+    <footer>
+<p>To jest sropka</p>
+<address>
+    <a href="">O nas</a>
+    <br>
+    <a href="">Kontakt</a>
+</address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {background-color: rgb(0, 255, 136); 
+    margin: auto;
+    width: 1024px;
+}
+
+header{
+    width: 1024px;
+height: 150px;
+}
+nav, article, aside{
+    height: 800px;
+    border: 1px solid hotpink;
+}
+nav{
+    width: 200px;
+    float: left;
+    background-color: teal;
+}
+article{
+    width: 600px;
+    float: left;
+    overflow: auto;
+    background: radial-gradient(circle, rgba(63,94,251,1) 22%, rgba(252,70,107,1) 75%);
+}
+aside{
+    width: 224px;
+    float: left;
+} 
+*{
+    box-sizing: border-box;
+}
+body>footer{
+    border: 5px dotted khaki;
+    height: 200px;
+    clear: both;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+body> footer, body>nav, body>article{
+    padding: 15px;
+}

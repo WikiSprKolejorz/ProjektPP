@@ -1,0 +1,41 @@
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+table tr th{
+    font-family: 'Times New Roman', Times, serif;
+    color: green;
+    font-style: italic;
+    border: 2px solid black;
+}
+tr td {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: small;
+    color: red;
+    border: 2px solid blue;
+    padding: 5px;
+}
+tr:hover {
+    background-color: rgb(248, 134, 134);
+    color: black;
+}
+.godziny{
+    width: 45px;
+}
+.zajety{
+    background-color: rgba(red, green, blue, alpha);
+    color: black;
+}
+.wolne{
+    background-color: lightblue;
+}
+body {
+    background-color: blue ;
+}
+article{
+    background:  cadetblue;
+   
+
+}
+
