@@ -17,43 +17,53 @@ function zegar(){
     setTimeout(zegar,1);      // czasTeraz.toTimeString() zamiast czasWartosc
 }
 
+//stoper
+// s.ms*100   1.1
+
 let stoper_sek = 0;
 let stoper_ms = 0;
 let stoperID = null;
 
 function stoper() {
-  if (stoper_ms >= 9) {
-    stoper_ms = 0;
-    stoper_sek++;
-  } else {
-    stoper_ms++;
-  }
+    if (stoper_ms >= 9) {
+      stoper_ms = 0;
+      stoper_sek++;
+    } else {
+      stoper_ms++;
+    }
 
-  const elemeStoper = document.getElementById("Stoper");
-  elemeStoper.innerHTML = "<i>" + stoper_sek + "." + stoper_ms + "</i>";
+    const elemeStoper = document.getElementById("Stoper");
+    elemeStoper.innerHTML = "<i>" + stoper_sek + "." + stoper_ms + "</i>";
 }
 
 function start_stoper() {
-  stoperID = setInterval(stoper, 100);
+    stoperID = setInterval(stoper, 100);
+}
+
+function stop_stoper() {
+    clearInterval(stoperID);
 }
 
 function saveStopwatchState() {
-  localStorage.setItem("stoper_sek", stoper_sek);
-  localStorage.setItem("stoper_ms", stoper_ms);
+    sessionStorage.setItem("stoper_sek", stoper_sek);
+    sessionStorage.setItem("stoper_ms", stoper_ms);
 }
 
 function loadStopwatchState() {
-  stoper_sek = parseInt(localStorage.getItem("stoper_sek")) || 0;
-  stoper_ms = parseInt(localStorage.getItem("stoper_ms")) || 0;
+    stoper_sek = parseInt(sessionStorage.getItem("stoper_sek")) || 0;
+    stoper_ms = parseInt(sessionStorage.getItem("stoper_ms")) || 0;
 }
 
 window.onload = function() {
-  loadStopwatchState();
-  start_stoper();
+    zegar();
+    loadStopwatchState();
+    start_stoper();
 };
 
 window.addEventListener("beforeunload", function() {
-  saveStopwatchState();
+    saveStopwatchState();
 });
+
+
 
 
