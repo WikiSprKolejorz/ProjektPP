@@ -1,4 +1,4 @@
-body {background-color: rgb(0, 255, 136); 
+body {background-color: rgb(255, 255, 255); 
     margin: auto;
     width: 1024px;
 }
@@ -6,24 +6,24 @@ body {background-color: rgb(0, 255, 136);
 header{
     width: 1024px;
     height: 150px;
-    background-color: aqua; 
+    background-color: rgb(38, 0, 255); 
     color: black;
     text-align: center;
 }
 nav, article, aside{
     height: 800px;
-    border: 1px solid hotpink;
+    border: 1px solid rgb(0, 0, 0);
 }
 nav{
     width: 200px;
     float: left;
-    background-color: teal;
+    background-color: rgb(255, 255, 255);
 }
 article{
     width: 600px;
     float: left;
     overflow: auto;
-    background: radial-gradient(circle, rgba(63,94,251,1) 22%, rgba(252,70,107,1) 75%);
+    background: radial-gradient(circle, rgb(255, 255, 255) 22%, rgb(38, 0, 255) 75%);
 }
 aside{
     width: 224px;
@@ -33,7 +33,7 @@ aside{
     box-sizing: border-box;
 }
 body>footer{
-    border: 5px dotted khaki;
+    border: 5px dotted rgb(0, 0, 255);
     height: 200px;
     clear: both;
 }
