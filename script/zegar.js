@@ -22,9 +22,11 @@ function data(){
     const dzisData = new Date();
     let dzien = dzisData.getDate();
     let miesiac = dzisData.getUTCMonth()+1;
-    miesiac = (miesiac>12)? miesiac%12 : miesiac ;
-
     let rok = dzisData.getFullYear();
+
+    miesiac = (miesiac>12)? miesiac%12 : miesiac ;
+    miesiac = (miesiac<10)? "0" + miesiac : miesiac;
+    dzien = (dzien<10)? "0" + dzien : dzien;
     
     const elementDataDiv = document.getElementById("Data");
     elementDataDiv.innerHTML = "<b>" + dzien + "-"+ miesiac + "-" + rok + "</b>";
@@ -66,17 +68,43 @@ function zaladujStanStopera() {
     stoper_ms = parseInt(sessionStorage.getItem("stoper_ms")) || 0;
 }
 
+window.addEventListener("beforeunload", function() {
+    zapiszStanStopera();
+});
+
+
+function incrementVisitorCount() {
+    let count = sessionStorage.getItem('visitorCount');
+    let hasIncremented = sessionStorage.getItem('hasIncremented');
+    
+    if (!count && !hasIncremented) {
+        console.log("chujchuj");
+      count = 1;
+      hasIncremented = true;
+    }
+    else if(!hasIncremented){
+        count+=1; 
+    }
+        sessionStorage.setItem('visitorCount', count);
+      sessionStorage.setItem('hasIncremented', hasIncremented);
+  }
+  
+  function displayVisitorCount() {
+    let count = sessionStorage.getItem('visitorCount') || 0;
+    console.log(sessionStorage.getItem('visitorCount'));
+    const counterElement = document.getElementById('Odwiedziny');
+    counterElement.innerHTML = "<b>" + count + "</b>";
+  }
+
+  
 window.onload = function() {
     zegar();
     data();
     zaladujStanStopera();
     start_stoper();
+    incrementVisitorCount();
+    displayVisitorCount();
 };
-
-window.addEventListener("beforeunload", function() {
-    zapiszStanStopera();
-});
-
 
 
 
