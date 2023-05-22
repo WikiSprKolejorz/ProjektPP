@@ -68,43 +68,60 @@ function zaladujStanStopera() {
     stoper_ms = parseInt(sessionStorage.getItem("stoper_ms")) || 0;
 }
 
-window.addEventListener("beforeunload", function() {
-    zapiszStanStopera();
-});
+let licznik;
+let czyDodane;
 
-
-function incrementVisitorCount() {
-    let count = sessionStorage.getItem('visitorCount');
-    let hasIncremented = sessionStorage.getItem('hasIncremented');
-    
-    if (!count && !hasIncremented) {
-        console.log("chujchuj");
-      count = 1;
-      hasIncremented = true;
+function liczbaWizyt(){
+    console.log("czyDodane: ");
+    console.log(czyDodane);
+    console.log("licznik: ");
+    console.log(licznik);
+    if(!licznik)
+    {
+        licznik=1;
     }
-    else if(!hasIncremented){
-        count+=1; 
-    }
-        sessionStorage.setItem('visitorCount', count);
-      sessionStorage.setItem('hasIncremented', hasIncremented);
-  }
-  
-  function displayVisitorCount() {
-    let count = sessionStorage.getItem('visitorCount') || 0;
-    console.log(sessionStorage.getItem('visitorCount'));
-    const counterElement = document.getElementById('Odwiedziny');
-    counterElement.innerHTML = "<b>" + count + "</b>";
-  }
+    if(czyDodane==0)
+    {
+        console.log("teraz juz czyDodane=true, powinno sie zinkrementowac");
 
-  
+        licznik+=1;
+        czyDodane=1;
+    }
+    const elemeWizyty = document.getElementById("Odwiedziny");
+    elemeWizyty.innerHTML = "<b>" + licznik +"</b>";
+}
+
+function zaladujStanWizyt()
+{
+    licznik = parseInt(sessionStorage.getItem("count"));
+    czyDodane = sessionStorage.getItem("ifIncremented");
+    console.log("inside zaladujStanWizyt()");
+    console.log(typeof(licznik));
+    console.log(typeof(czyDodane));
+}
+
+ function zapiszStanWizyt(){
+    console.log("wypierdalam!");
+    czyDodane=0;
+    sessionStorage.setItem("count",licznik);
+    sessionStorage.setItem("ifIncremented",czyDodane);
+ }
+
+
+
 window.onload = function() {
     zegar();
     data();
+
     zaladujStanStopera();
     start_stoper();
-    incrementVisitorCount();
-    displayVisitorCount();
+
+    zaladujStanWizyt();
+    liczbaWizyt();
 };
 
-
+window.addEventListener("beforeunload", function() {
+    zapiszStanStopera();
+    zapiszStanWizyt();
+});
 
