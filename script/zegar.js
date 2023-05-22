@@ -5,12 +5,10 @@ function zegar(){
     let godzina = czasTeraz.getHours();
     let minuta = czasTeraz.getMinutes();
     let sekunda = czasTeraz.getSeconds();
-    let milisekunda = czasTeraz.getMilliseconds();
     let czasWartosc = (godzina>12)? godzina-12 : godzina;
     czasWartosc = (godzina==0)? 12 : godzina-12;
     czasWartosc += (minuta<=9)? ":0" + minuta : ":" + minuta;
     czasWartosc += (sekunda<=9)? ":0" + sekunda : ":"+ sekunda;
-    czasWartosc += (milisekunda<=9)? ":0" + milisekunda : ":"+ milisekunda;
     czasWartosc += (godzina > 12)? "PM" : "AM";
     
 
