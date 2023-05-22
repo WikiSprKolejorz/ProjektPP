@@ -17,6 +17,18 @@ function zegar(){
     setTimeout(zegar,1);      // czasTeraz.toTimeString() zamiast czasWartosc
 }
 
+
+function data(){
+    const dzisData = new Date();
+    let dzien = dzisData.getDate();
+    let miesiac = dzisData.getUTCMonth()+1;
+    miesiac = (miesiac>12)? miesiac%12 : miesiac ;
+
+    let rok = dzisData.getFullYear();
+    
+    const elementDataDiv = document.getElementById("Data");
+    elementDataDiv.innerHTML = "<b>" + dzien + "-"+ miesiac + "-" + rok + "</b>";
+}
 //stoper
 // s.ms*100   1.1
 
@@ -44,24 +56,25 @@ function stop_stoper() {
     clearInterval(stoperID);
 }
 
-function saveStopwatchState() {
+function zapiszStanStopera() {
     sessionStorage.setItem("stoper_sek", stoper_sek);
     sessionStorage.setItem("stoper_ms", stoper_ms);
 }
 
-function loadStopwatchState() {
+function zaladujStanStopera() {
     stoper_sek = parseInt(sessionStorage.getItem("stoper_sek")) || 0;
     stoper_ms = parseInt(sessionStorage.getItem("stoper_ms")) || 0;
 }
 
 window.onload = function() {
     zegar();
-    loadStopwatchState();
+    data();
+    zaladujStanStopera();
     start_stoper();
 };
 
 window.addEventListener("beforeunload", function() {
-    saveStopwatchState();
+    zapiszStanStopera();
 });
 
 
