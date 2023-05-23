@@ -34,7 +34,7 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
         </ul>
     </nav>
     <article>
-        <h2>Formularz danych osobowych</h2>
+        <h2>Formularz zgłoszeniowy</h2>
         <form action="#" method="post">
             <p>Pola tekstowe z <em>*</em> są wymagane</p>
             <fieldset>
@@ -61,37 +61,47 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
 
                 <br>
                 <label for="mail">mail <em>*</em></label>
-                <input type="email" name="email" id="email" required placeholder="np. example@example.com">
-                
-            </fieldset>
-
-            <fieldset>
-                <legend> Szczegółowe dane osobowe </legend>
-                <label for="data Urodzenia">Data urodzenia</label>
+                <input type="email" name="email" id="email" required placeholder="np.jankowalski@example.com">
+        
+                <label for="data Urodzenia">Data urodzenia <em>*</em></label>
                 <input type="date" name="data Urodzenia" id="">
 <br>
-                <label for="kod">Kod pocztowy</label>
+                <label for="kod">Kod pocztowy <em>*</em></label>
                 <input type="text" name="kod" id="" placeholder="xx-xxx">
-                <label for="miasto">Miasto</label>
+                <label for="miasto">Miasto <em>*</em></label>
                 <input type="text" name="miasto" id="" placeholder="Poznań"><br>
-                <label for="ulica">Ulica</label>
-                <input type="text" name="ulica" id="" placeholder="Romera"><br>
-                <label for="numDom">Numer domu/mieszkania</label>
-                <input type="text" name="numDom" id="" placeholder="1,2,3,4,"><br>
+                <label for="ulica">Ulica <em>*</em></label>
+                <input type="text" name="ulica" id="" placeholder="św.Marcin"><br>
+                <label for="numDom">Numer domu/mieszkania <em>*</em></label>
+                <input type="text" name="numDom" id="" placeholder="1,2,3,4..."><br>
 
-                <label for="wzrost">Wzrost</label>
-                <input type="number" name="wzrost" id="" step="0.1" min="120" max="270">
-<br>
-<label for="płeć">Płeć</label>
+<label for="płeć">Płeć <em>*</em></label>
 <select name="płeć" id="">
     <option value="Kobieta">Kobieta</option>
     <option value="Mężczyzna">Mężczyzna</option>
-    <option value="Helikopter">Helikopter</option>
-    <option value="Delfin">Delfin</option>
+    <option value="Wolę nie odpowiadać">Wolę nie odpowiadać</option>
 </select>
 <br>
-             <label for="siła">Siła</label>
-             <input type="range" name="siła" id="" min="10" max="100" value="80">   
+             <label for="masa ciała">Masa ciała</label>   
+             <input type="number" name="masa ciała" id="" step="1" min="40" max="150">
+             <style>
+                #SuwakWzrostu {
+                  width: 200px;
+                }
+                #Wzrost {
+                  margin-top: 10px;
+                }
+              </style>
+              <script>
+                function updateHeightValue() {
+                  const slider = document.getElementById('SuwakWzrostu');
+                  const valueDisplay = document.getElementById('Wzrost');
+                  valueDisplay.textContent = slider.value + " cm";
+                }
+                </script>
+                <label for="wzrost">Wzrost</label>
+                <input type="range" id="SuwakWzrostu" min="150" max="210" value="170" onchange="updateHeightValue()">
+                <div id="Wzrost">170 cm</div>
 
             </fieldset>
             <fieldset>
@@ -108,6 +118,10 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
 
             <fieldset>
                 <legend>Wykształcenie</legend>
+                <input type="radio" name="w" id="">
+                <label for="radio">brak wykształcenia</label>
+                <input type="radio" name="w" id="">
+                <label for="w">wykształcenie średnie</label>
                 <input type="radio" name="w" id=""> 
                 <label for="w">inż.</label> 
                 <input type="radio" name="w" id="">
@@ -116,7 +130,6 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
                 <label for="w">dr</label> 
                 <input type="radio" name="w" id="">
                 <label for="w">prof.</label>
-
             </fieldset>
             <div class="przyciski">
                  <input type="reset" value="kasuj formularz">
