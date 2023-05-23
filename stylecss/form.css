@@ -1,13 +1,13 @@
 em{
-    color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
     font-weight: bold;
 }
 fieldset{
     width: 400px;
     margin: 15px auto;
-    border: 5px double black;
+    border: 5px groove black;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 legend{

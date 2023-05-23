@@ -44,8 +44,19 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
                 <label for="Nazwisko">nazwisko <em>*</em></label>
                 <input type="text" name="nazwisko" id="nazwisko">
                 <br>
+                <script>
+                    function validateInput(event) {
+                      const input = event.target;
+                      const inputValue = input.value;
+                      const numericInput = /^[0-9]+$/;
+                      
+                      if (!numericInput.test(inputValue)) {
+                        input.value = inputValue.replace(/\D/g, '');
+                      }
+                    }
+                  </script>
                 <label for="telefon">nr telefonu <em>*</em></label>
-                <input type="telefon" name="telefon" id="telefon" required placeholder="(+48 xxx-xxx-xxx)">
+                <input type="telefon" name="telefon" id="telefon" oninput="validateInput(event)" required placeholder="(+48 xxx-xxx-xxx)">
 
                 <br>
                 <label for="mail">mail <em>*</em></label>
@@ -103,7 +114,7 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
                 <input type="radio" name="w" id=""> 
                 <label for="w">dr</label> 
                 <input type="radio" name="w" id="">
-                <label for="w">prof.</label> 
+                <label for="w">prof.</label>
 
             </fieldset>
             <div class="przyciski">
