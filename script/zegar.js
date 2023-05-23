@@ -68,60 +68,38 @@ function zaladujStanStopera() {
     stoper_ms = parseInt(sessionStorage.getItem("stoper_ms")) || 0;
 }
 
-let licznik;
-let czyDodane;
 
-function liczbaWizyt(){
-    console.log("czyDodane: ");
-    console.log(czyDodane);
-    console.log("licznik: ");
-    console.log(licznik);
-    if(!licznik)
-    {
-        licznik=1;
+function showlicznikWizyt() {
+    var licznikWizyt = localStorage.getItem('licznikWizyt');
+  
+    if (!licznikWizyt) {
+      licznikWizyt = 1;
     }
-    if(czyDodane==0)
-    {
-        console.log("teraz juz czyDodane=true, powinno sie zinkrementowac");
-
-        licznik+=1;
-        czyDodane=1;
+  
+    if (!sessionStorage.getItem('visited')) {
+      licznikWizyt++;
+      localStorage.setItem('licznikWizyt', licznikWizyt);
+      sessionStorage.setItem('visited', true);
     }
-    const elemeWizyty = document.getElementById("Odwiedziny");
-    elemeWizyty.innerHTML = "<b>" + licznik +"</b>";
-}
-
-function zaladujStanWizyt()
-{
-    licznik = parseInt(sessionStorage.getItem("count"));
-    czyDodane = sessionStorage.getItem("ifIncremented");
-    console.log("inside zaladujStanWizyt()");
-    console.log(typeof(licznik));
-    console.log(typeof(czyDodane));
-}
-
- function zapiszStanWizyt(){
-    console.log("wypierdalam!");
-    czyDodane=0;
-    sessionStorage.setItem("count",licznik);
-    sessionStorage.setItem("ifIncremented",czyDodane);
- }
-
+  
+    var odwiedzinyElement = document.getElementById('Odwiedziny');
+    odwiedzinyElement.textContent = 'Liczba odwiedzin: ' + licznikWizyt;
+  }
+  
+document.addEventListener('DOMContentLoaded', showlicznikWizyt);
+  
+window.addEventListener("beforeunload", function() {
+    zapiszStanStopera();
+});
 
 
 window.onload = function() {
     zegar();
     data();
-
     zaladujStanStopera();
     start_stoper();
-
-    zaladujStanWizyt();
-    liczbaWizyt();
+    incrementVisitorCount();
 };
 
-window.addEventListener("beforeunload", function() {
-    zapiszStanStopera();
-    zapiszStanWizyt();
-});
+
 
