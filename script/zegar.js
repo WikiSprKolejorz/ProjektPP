@@ -47,7 +47,7 @@ function stoper() {
     }
 
     const elemeStoper = document.getElementById("Stoper");
-    elemeStoper.innerHTML = "<i>" + stoper_sek + "." + stoper_ms + "</i>";
+    elemeStoper.innerHTML = "<b>" + stoper_sek + "." + stoper_ms + "</b>";
 }
 
 function start_stoper() {
@@ -83,7 +83,7 @@ function showlicznikWizyt() {
     }
   
     var odwiedzinyElement = document.getElementById('Odwiedziny');
-    odwiedzinyElement.textContent = 'Liczba odwiedzin: ' + licznikWizyt;
+    odwiedzinyElement.innerHTML = "<b>" + licznikWizyt + "</b>";
   }
   
 document.addEventListener('DOMContentLoaded', showlicznikWizyt);
@@ -98,7 +98,6 @@ window.onload = function() {
     data();
     zaladujStanStopera();
     start_stoper();
-    incrementVisitorCount();
 };
 
 
