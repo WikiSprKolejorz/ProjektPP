@@ -104,17 +104,6 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
                 <div id="Wzrost">170 cm</div>
 
             </fieldset>
-            <fieldset>
-                <legend>Zainteresowania</legend>
-                <input type="checkbox" name="en" id="en">
-                <label for="en">Energetyka </label> <br>
-                <input type="checkbox" name="noga" id="noga">
-                <label for="noga">Piłka nożna</label> <br>
-                <input type="checkbox" name="hista" id="hista">
-                <label for="hista">Historia II wojny światowej</label> <br>
-                <input type="checkbox" name="zyd" id="zyd">
-                <label for="zyd">Słynni Żydzi</label> <br>
-            </fieldset>
 
             <fieldset>
                 <legend>Wykształcenie</legend>
@@ -131,6 +120,60 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
                 <input type="radio" name="w" id="">
                 <label for="w">prof.</label>
             </fieldset>
+
+            <fieldset>
+                <legend>Hobby i Zainteresowania</legend>
+            <style>
+            .hidden {display: none;}
+            </style>
+            <input type="checkbox" id="sport" />
+            <label for="sport">Sport</label>
+            <div id="kontorlkirozw" class="hidden">
+            <input type="checkbox" id="indyw" />
+            <label for="indyw">Sporty Indywidualne</label><br>
+            <input type="checkbox" id="zesp" />
+            <label for="zesp">Sporty Zespołowe</label><br>
+            <input type="checkbox" id="extr" />
+            <label for="extr">Sporty Ekstremalne</label><br>
+            </div>
+            <script>
+            const checkbox = document.getElementById('sport');
+            const expandedControls = document.getElementById('kontorlkirozw'); 
+            checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+            expandedControls.classList.remove('hidden');
+            } else {
+            expandedControls.classList.add('hidden');
+            }
+            });
+            </script> <br>
+                <input type="checkbox" name="scisle" id="scisle">
+                <label for="scisle">Przedmioty ścisłe</label> <br>
+                <input type="checkbox" name="human" id="human">
+                <label for="human">Przedmioty humanistyczne</label> <br>
+                <input type="checkbox" name="foto" id="foto">
+                <label for="foto">Fotografia</label> <br>
+                <input type="checkbox" name="blog" id="blog">
+                <label for="blog">Blogowanie</label> <br>
+                <input type="checkbox" name="ogrod" id="ogrod">
+                <label for="ogrod">Ogrodnictwo</label> <br>
+                <input type="checkbox" name="film" id="film">
+                <label for="film">Film</label> <br>
+                <input type="checkbox" name="ksiazka" id="ksiazka">
+                <label for="ksiazka">Książka</label> <br>
+                <input type="checkbox" name="muzyka" id="muzyka">
+                <label for="muzyka">Muzyka</label> <br>
+                <input type="checkbox" name="podroze" id="podroze">
+                <label for="podroze">Podróże</label> <br>
+                <input type="checkbox" name="kuchnia" id="kuchnia">
+                <label for="kuchnia">Gotowanie</label> <br>
+                <label for="text">Inne</label> <br>
+                <input type="text" name="text" id="text">
+            </fieldset>
+<p>Zgody regulaminów</p> <br>
+<input type="checkbox" name="zgoda" id="zgoda">
+<label for="zgoda">Zapoznałem się i akceptuję regulamin <em>*</em></label>
+            
             <div class="przyciski">
                  <input type="reset" value="kasuj formularz">
             <input type="submit" value="wyślij">
