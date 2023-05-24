@@ -52,3 +52,15 @@ body> footer, body>nav, body>article{
 #Galeria{
     background-color: white;
 }
+
+#prezka{
+    width: 476px; 
+    height: 288px; 
+}
+
+#outer_prezka{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
+}
