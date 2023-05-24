@@ -26,7 +26,7 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
             <li><a href="tabela.html">Wykaz zdobytych trofeów w ostatnich latach</a></li> <br>
             <li><a href="formularz.html">Formularz zgłoszeniowy do pracy w dziale historycznym Lecha Poznań</a></li> <br>
             <li><a href="tablicaJS.html">Tabela dynamiczna w JS</a></li> <br>
-            <li><a href="javascript.html">Nie wiem jakis eksperyment</a></li> <br>
+            <li><a href="javascript.html">Zrelaksuj się!</a></li> <br>
             <li><a href="galeria.html">Galeria zdjęć</a></li> <br>
             <li><a href="prezentacja.html">Prezentacja</a></li> <br>
         </ul>   
@@ -34,62 +34,8 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
         </ul>
     </nav>
     <article>
-        <script>
-            //alert("Komunikat - alert!");
-            var zmienna=10;
-            zmiennaC=100;
-
-     let a=5;
-     const stala=34;
-     //stala=99; BŁĄD!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            
-            {
-                let a=10;
-            }
-            
-           // alert("zm a:"+a) 
-           // alert("stala:"+stala)
-        
-            document.write("<h2> Pętla for </h2>")
-            
-            for (let index = 0; index < 10; index++) {
-               document.write("Linia nr: " +index + "<br>");
-               console.log(index);
-                
-            }
-           
-            a=0;
-            while (a>10) {
-                document.write ('Linia nr: {a} <br>');
-                a++;
-            }
-           
-            //-----zmienne
-            let zmienna_txt = "Ala ma kota";
-            document.write("liczba znaków: " +zmienna_txt.length+ "<br>");
-            document.write(zmienna_txt.charAt(10)+"<br>");
-            document.write(`Ostania litera to:)
-            ${zmienna_txt.charAt(zmienna_txt.length-1)}`);
-
-            document.write("<br><br>");
-            for(let i=0; i<zmienna_txt.length; i++){
-                for(let j=0; j<i; j++) document.write("&nbsp;&nbsp;");
-                document.write(zmienna_txt.charAt(i)+"<br>")
-
-            }
-            const tabZ= [...zmienna_txt];
-            console.table(tabZ)
-
-            document.write("<br>");
-            document.write(zmienna_txt.substring(0,3)+"<br>");
-            document.write(zmienna_txt.substring(3)+"<br>");
-
-            document.write(zmienna_txt.toUpperCase()+"<br>");
-
-
-
-            
-        </script>
+        <canvas id="grafikaJS" width="400" height="300"></canvas>
+        <script src="script/canvas.js"></script>
     </article>
 
     <aside>

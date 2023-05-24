@@ -64,3 +64,8 @@ body> footer, body>nav, body>article{
   align-items: center;
   height: 100vh; /* Adjust the height as needed */
 }
+
+canvas{
+    background-color: wheat;
+    border: 5px solid red;
+}
