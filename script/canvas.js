@@ -5,17 +5,16 @@ const p = {
   x: 25,
   y: 25
 };
-const velo = 3;
-const corner = 50;
-const rad = 20;
+let velo = 3;
+let rad = 20;
 
 const ball = {
   x: p.x,
   y: p.y
 };
 
-let moveX = Math.cos(Math.PI / 180 * corner) * velo;
-let moveY = Math.sin(Math.PI / 180 * corner) * velo;
+let moveX = Math.cos(Math.PI / 180 * 50) * velo;
+let moveY = Math.sin(Math.PI / 180 * 50) * velo;
 
 const DrawMe = () => {
   ctx.clearRect(0, 0, 400, 300);
@@ -34,3 +33,17 @@ const DrawMe = () => {
 }
 
 setInterval(DrawMe, 10);
+
+// Slider event listeners
+const veloSlider = document.getElementById('veloSlider');
+const radSlider = document.getElementById('radSlider');
+
+veloSlider.addEventListener('input', () => {
+  velo = parseInt(veloSlider.value);
+  moveX = Math.cos(Math.PI / 180 * 50) * velo;
+  moveY = Math.sin(Math.PI / 180 * 50) * velo;
+});
+
+radSlider.addEventListener('input', () => {
+  rad = parseInt(radSlider.value);
+});
