@@ -5,32 +5,47 @@
     <meta charset="utf-8" />
     <title>Artykuł o historii Lecha Poznań</title>
     <link rel="stylesheet" href="stylecss/layout.css">
+    <link rel="stylesheet" href="stylecss/rwd.css">
 </head>
 <body>
     
-    <header>    
-        <h1>
-Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
-        </h1>
+    <header>   
+        <!-- Top Navigation Menu -->
+    <h1>
+            Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
+    </h1>
+    <div class="topnav">
+        <a href="#home" class="active">Strona główna
+        </h1></a>
+        <div id="myLinks">
+            <a href="index.html">Strona główna</a> <br>
+            <a href="artykul.html">Artykuł o ostatnim sezonie</a> <br>
+            <a href="tabela.html">Wykaz zdobytych trofeów w ostatnich latach</a> <br>
+            <a href="formularz.html">Formularz zgłoszeniowy do pracy w dziale historycznym Lecha Poznań</a> <br>
+            <a href="tablicaJS.html">Tabela dynamiczna w JS</a> <br>
+            <a href="javascript.html">Zrelaksuj się!</a> <br>
+            <a href="galeria.html">Galeria zdjęć</a> <br>
+            <a href="prezentacja.html">Prezentacja</a> <br>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</header>
 
-    </header>
-    
-    <nav>
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="index.html">Strona główna</a></li> <br>
-            <li><a href="artykul.html">Artykuł o ostatnim sezonie</a></li> <br>
-            <li><a href="tabela.html">Wykaz zdobytych trofeów w ostatnich latach</a></li> <br>
-            <li><a href="formularz.html">Formularz zgłoszeniowy do pracy w dziale historycznym Lecha Poznań</a></li> <br>
-            <li><a href="tablicaJS.html">Tabela dynamiczna w JS</a></li> <br>
-            <li><a href="javascript.html">Zrelaksuj się!</a></li> <br>
-            <li><a href="galeria.html">Galeria zdjęć</a></li> <br>
-            <li><a href="prezentacja.html">Prezentacja</a></li> <br>
-        </ul>   
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
 
-        </ul>
-    </nav>
-    <article>
+<div>
+    <div class="article">
         <header>
             <h2>
 Sezon 2021/22
@@ -107,15 +122,13 @@ Sezon 2021/22
         
        </footer>
         
-        </article>
- 
-        
+    </div>
 
-    </article>
-
-    <aside>
+    <div class="aside">
         <iframe src="aside.html"></iframe>
-    </aside>
+    </div>
+</div>
+
 
     <footer>
 <p>Wiktor Springer <br>
