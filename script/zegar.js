@@ -97,7 +97,7 @@ window.onload = function() {
     zegar();
     data();
     zaladujStanStopera();
-    start_stoper();
+    start_stoper(); 
 };
 
 
