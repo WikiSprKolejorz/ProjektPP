@@ -12,6 +12,7 @@
     margin: 10px;
     background-color: white;
     overflow: hidden;
+    z-index: 1;
 }
 
 .slider__slides {
