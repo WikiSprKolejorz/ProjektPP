@@ -4,6 +4,11 @@ body.first {
     width: 100%;
     max-width: 1000px;
 }
+body.second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 header{
     /* width: 1024px;
@@ -26,7 +31,6 @@ nav{
     border: 2px dashed rgb(0, 0, 0);
     padding: 5px;
     height: auto;
-    
 }
 .aside{
     width: 100%;
@@ -66,6 +70,12 @@ body> footer, body>nav, body>article{
 canvas{
     background-color: wheat;
     border: 5px solid red;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
 }
 
 .odd{
@@ -78,4 +88,17 @@ canvas{
     min-height: 15em;
     background-color: red;
 
+}
+#grafikaJS{
+    width: 60%;
+    height: 100%;
+}
+
+#sliders{
+    width: 20%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }

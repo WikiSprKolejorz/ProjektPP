@@ -48,10 +48,12 @@
     }
     </script>
     <div class="article">
-    <article>
-        <canvas id="grafikaJS" width="400" height="300"></canvas> </br>
-        velocity:<input type="range" id="veloSlider" min="1" max="10" value="3"></br>
-        radius: &nbsp&nbsp<input type="range" id="radSlider" min="10" max="50" value="20">
+    <article id="out_canvas">
+        <canvas id="grafikaJS" ></canvas></br>
+            <div id="sliders">
+                velocity:<input type="range" id="veloSlider" min="1" max="10" value="3"></br>
+                radius: &nbsp&nbsp<input type="range" id="radSlider" min="10" max="50" value="20">
+            </div>
         <script src="script/canvas.js"></script>
     </article>
 </div>
