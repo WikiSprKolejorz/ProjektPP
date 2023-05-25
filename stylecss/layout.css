@@ -1,19 +1,22 @@
-body {
+body.first {
     background-color: rgb(215, 129, 16); 
     margin: auto;
-    width: 1024px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 header{
-    width: 1024px;
-    height: 150px;
+    /* width: 1024px;
+    height: 150px; */
+    width: 100%;
+    height: 100%;
     background-color: #111ba1; 
     color: rgb(255, 255, 255);
     text-align: center;
 }
 
 nav{
-    width: 200px;
+    width: 100%;
     background-color: rgb(31, 31, 201);
     text-align: center;
 }
@@ -22,11 +25,13 @@ nav{
     background: radial-gradient(circle, rgb(255, 255, 255) 22%, rgb(38, 0, 255) 75%);
     border: 2px dashed rgb(0, 0, 0);
     padding: 5px;
+    height: auto;
     
 }
 .aside{
     width: 100%;
-    background-color: rgb(215, 129, 16);
+    height: auto;
+    border: none;
 } 
 *{
     box-sizing: border-box;
@@ -50,16 +55,12 @@ body> footer, body>nav, body>article{
     background-color: white;
 }
 
-#prezka{
-    width: 476px; 
-    height: 288px; 
-}
 
 #outer_prezka{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust the height as needed */
+    height: 60vh; /* Adjust the height as needed */
 }
 
 canvas{
@@ -72,4 +73,9 @@ canvas{
 }
 .even{
     background-color: red;
+}
+.iframe_aside{
+    min-height: 15em;
+    background-color: red;
+
 }

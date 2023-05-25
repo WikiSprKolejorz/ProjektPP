@@ -5,46 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .unpressed{
-            background-image: url(images/unpressed.png);
-            background-repeat: no-repeat;
-            width: 180px;
-            height: 40px;
-            text-align: center;
-            padding-top: 8px;
-            color: darkblue;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        
-            .pressed{
-                background-image: url(images/pressed.png);
-            background-repeat: no-repeat;
-            width: 180px;
-            height: 40px;
-            text-align: center;
-            padding-top: 8px;
-            color: rgb(194, 230, 173);
-            font-weight: bold;
-            font-size: 20px;
-
-            }
-
-    </style>
-    <script src="script/podmien.js"></script>
     <script src="script/zegar.js"> </script>
+    <link rel="stylesheet" href="stylecss/layout.css">
 </head>
 <body>
-    <h2>Zegarek</h2>
+    <div id="out_con">
+        <h2>Zegarek</h2>
 
-    Dzisiejsza data:
-    <div id="Data"></div>
-    Aktualny czas:
-    <div id="Zegar"></div>
-    Licznik odwiedzin:
-    <div id="Odwiedziny"></div>
-    Stoper:
-    <div id="Stoper">00:00:00</div>
+        Dzisiejsza data:
+        <div id="Data"></div>
+        Aktualny czas:
+        <div id="Zegar"></div>
+        Licznik odwiedzin:
+        <div id="Odwiedziny"></div>
+        Stoper:
+        <div id="Stoper">00:00:00</div>
+    </div>
 </body>
 </html>
