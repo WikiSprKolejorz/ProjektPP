@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(158, 167, 70); 
+    background-color: rgb(215, 129, 16); 
     margin: auto;
     width: 1024px;
 }
@@ -7,23 +7,26 @@ body {
 header{
     width: 1024px;
     height: 150px;
-    background-color: rgb(255, 255, 255); 
-    color: black;
+    background-color: #111ba1; 
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
 nav{
     width: 200px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(31, 31, 201);
+    text-align: center;
 }
 .article{
     width: 100%;
     background: radial-gradient(circle, rgb(255, 255, 255) 22%, rgb(38, 0, 255) 75%);
-    border: 7px dashed red;
+    border: 2px dashed rgb(0, 0, 0);
+    padding: 5px;
+    
 }
 .aside{
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(215, 129, 16);
 } 
 *{
     box-sizing: border-box;

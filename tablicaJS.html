@@ -3,46 +3,67 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8" />
-    <title>Historia Lecha Poznań</title>
+    <title>Zgody</title>
     <style>
         h1,h2{text-align: center;}
     </style>
     <link rel="stylesheet" href="stylecss/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="stylecss/rwd.css">
     <script src="script/tablica.js"></script>
 </head>
 <body>
     
-    <header style="background-color: rgb(255, 255, 255); color: black;">    
+    <header style="background-color: #111ba1; color: rgb(255, 255, 255);">    
         <h1>
 Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
         </h1>
 
     </header>
     
-    <nav>
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="index.html">Strona główna</a></li> <br>
-            <li><a href="artykul.html">Artykuł o ostatnim sezonie</a></li> <br>
-            <li><a href="tabela.html">Wykaz zdobytych trofeów w ostatnich latach</a></li> <br>
-            <li><a href="formularz.html">Formularz zgłoszeniowy do pracy w dziale historycznym Lecha Poznań</a></li> <br>
-            <li><a href="tablicaJS.html">Tabela dynamiczna w JS</a></li> <br>
-            <li><a href="javascript.html">Zrelaksuj się!</a></li> <br>
-            <li><a href="galeria.html">Galeria zdjęć</a></li> <br>
-            <li><a href="prezentacja.html">Prezentacja</a></li> <br>
-        </ul>   
+    <div class="topnav">
+        <a href="#home" class="active">Strona główna
+        </h1></a>
+        <div id="myLinks">
+            <a href="index.html">Strona główna</a> <br>
+            <a href="artykul.html">Artykuł o ostatnim sezonie</a> <br>
+            <a href="tabela.html">Wykaz osiągnięć zdobytych w ostatnich latach</a> <br>
+            <a href="formularz.html">Formularz zgłoszeniowy do pracy w dziale historycznym Lecha Poznań</a> <br>
+            <a href="tablicaJS.html">Zgody kibicowskie</a> <br>
+            <a href="javascript.html">Zrelaksuj się!</a> <br>
+            <a href="galeria.html">Galeria zdjęć</a> <br>
+            <a href="prezentacja.html">Prezentacja</a> <br>
+            <a href="zawodnicy.html"> Zawodnicy</a> <br>
+            <a href="kalkulator.html"> Kalkulator </a> <br>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</header>
 
-        </ul>
-    </nav>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+    <div class="article">
     <article>
-        <h2>Tablica samolotów</h2>
-        <input type="button" id="btnTablica" value="generuj tablicę" onclick="wyswietl(tabSamoloty)">
-        <table id="tablica">
+        
+        <h2>Zgody Kibicowskie</h2>
+        
+        <input type="button" id="btnTablica" value="generuj tablicę" onclick="wyswietl(tabKibice)">
+        <table id="tablica" border="1">
            
         </table>
-        <h1> <strong>MICHAŁ SKÓRALDO</strong>  </h1> 
+        <h1> <strong>CHWAŁA WIELKIEJ TRIADZIE!</strong>  </h1> 
     </article>
-
+</div>
     <aside>
         <iframe src="aside.html"></iframe>
     </aside>
@@ -53,11 +74,6 @@ Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
     Energetyka IV semestr <br>
     Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka 2022/23 <br>
 </p>
-<address>
-    <a href="">O nas</a>
-    <br>
-    <a href="">Kontakt</a>
-</address>
     </footer>
 </body>
 </html>

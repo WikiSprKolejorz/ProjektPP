@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <title>Historia Lecha Poznań</title>
+    <style>
+        h1,h2{text-align: center;}
+    </style>
+    <link rel="stylesheet" href="stylecss/layout.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="stylecss/rwd.css">
+<style>
+
+</style>
+</head>
+<body>
+    
+    <header>   
+            <!-- Top Navigation Menu -->
+        <h1>
+                Strona o historii najlepszych i najważniejszych sezonach Lecha Poznań
+        </h1>
+        <div class="topnav">
+            <a href="#home" class="active">Strona główna
+            </h1></a>
+            <div id="myLinks">
+                <a href="index.html">Strona główna</a> <br>
+                <a href="artykul.html">Artykuł o ostatnim sezonie</a> <br>
+                <a href="tabela.html">Wykaz osiągnięć zdobytych w ostatnich latach</a> <br>
+                <a href="formularz.html">Formularz zgłoszeniowy do pracy w dziale historycznym Lecha Poznań</a> <br>
+                <a href="tablicaJS.html">Zgody kibicowskie</a> <br>
+                <a href="javascript.html">Zrelaksuj się!</a> <br>
+                <a href="galeria.html">Galeria zdjęć</a> <br>
+                <a href="prezentacja.html">Prezentacja</a> <br>
+                <a href="zawodnicy.html"> Zawodnicy</a> <br>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+        </script>
+    
+        <div class="article">
+            <p>Konwerter pozwala oszacować zysk z meczu organizowanego przez Lecha Poznań. Wynik należy brać z przybliżeniem, ponieważ cena wynajęcia ochrony, a także wartość kosztów stałych, zależy od rozgrywek i wagi meczu.</p> <br>
+            <p> Przyjąć można, że w rozgrywkach Krajowych (Ekstraklasa oraz Puchar Polski) cena zatrudnienia ochrony na mecz to od 15-20 tys. zł. W przypadku rozgrywek międzynarodowych (LKE, LE, LM) cena zatrudnienia ochrony waha się w granicach od 35-50 tys.zł </p> <br>
+            <p>Jeśli chodzi o koszty stałe, to w rozgrywkach Krajowych (Ekstraklasa oraz Puchar Polski) zakłada się, że wynoszą 300 tys.zł. W przypadku rozgrywek międzynarodowych (LKE, LE, LM) koszty stałe oscylują w granicach nawet 650 tys.zł</p> <br>
+            <style>
+                .container {
+                  max-width: 400px;
+                  margin: 0 auto;
+                  padding: 20px;
+                }
+            
+                label {
+                  display: block;
+                  margin-bottom: 10px;
+                }
+            
+                input {
+                  width: 100%;
+                  padding: 5px;
+                  margin-bottom: 10px;
+                }
+            
+                button {
+                  display: block;
+                  width: 100%;
+                  padding: 10px;
+                  background-color: #4CAF50;
+                  color: white;
+                  border: none;
+                  cursor: pointer;
+                }
+              </style>
+              <div class="container">
+                <h1>Konwerter zysku z meczu</h1>
+                <label for="liczbaKibicow">Liczba kibiców:</label>
+                <input type="number" id="liczbaKibicow">
+            
+                <label for="kosztBiletu">Koszt biletu:</label>
+                <input type="number" id="kosztBiletu">
+            
+                <label for="ochrona">Koszt ochrony:</label>
+                <input type="number" id="ochrona">
+            
+                <label for="kosztyStale">Koszty stałe:</label>
+                <input type="number" id="kosztyStale">
+            
+                <button onclick="obliczZysk()">Oblicz zysk</button>
+            
+                <h2 id="wynik"></h2>
+              </div>
+            
+              <script>
+                function obliczZysk() {
+                  var liczbaKibicow = parseInt(document.getElementById("liczbaKibicow").value);
+                  var kosztBiletu = parseFloat(document.getElementById("kosztBiletu").value);
+                  var ochrona = parseFloat(document.getElementById("ochrona").value);
+                  var kosztyStale = parseFloat(document.getElementById("kosztyStale").value);
+            
+                  var zysk = (liczbaKibicow * kosztBiletu) - (ochrona + kosztyStale);
+            
+                  document.getElementById("wynik").textContent = "Zysk z meczu: " + zysk.toFixed(2);
+                }
+              </script>
+
+        <div class="aside">
+            <iframe src="aside.html"></iframe>
+        </div>
+    </div>
+    <footer>
+<p> Wiktor Springer <br>
+    153206 <br>
+    Energetyka IV semestr <br>
+    Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka 2022/23 <br>
+ </p>
+    </footer>
+</body>
+</html>
