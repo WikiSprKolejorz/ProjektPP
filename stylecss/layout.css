@@ -66,3 +66,10 @@ canvas{
     background-color: wheat;
     border: 5px solid red;
 }
+
+.odd{
+    background-color: yellowgreen;
+}
+.even{
+    background-color: red;
+}
